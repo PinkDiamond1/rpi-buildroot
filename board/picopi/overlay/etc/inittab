@@ -19,6 +19,8 @@
 ::sysinit:/bin/mkdir -p /dev/shm
 ::sysinit:/bin/mount -a
 ::sysinit:/bin/hostname -F /etc/hostname
+# Load Wifi driver - RS change
+::sysinit:/sbin/modprobe brcmfmac
 # now run any rc scripts
 ::sysinit:/etc/init.d/rcS
 ::sysinit:/usr/sbin/preco8
